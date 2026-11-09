@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+    <channel>
+        <title>Noticias de Barbería Dani</title>
+        <link>https://www.tudominio.com/</link>
+        <description>Últimas novedades, tendencias y noticias del mundo de la barbería y el cuidado masculino.</description>
+        <language>es-ES</language>
+
+        <item>
+            <title>De la nostalgia ochentera a los cortes geométricos</title>
+            <description>El International Barber Fest muestra nuevas tendencias y estilos del mundo de la barbería.</description>
+            <link>https://www.henkel.es/prensa-y-comunicacion/notas-de-prensa/2026-10-15-de-la-nostalgia-ochentera-a-los-cortes-geometricos-2259254</link>
+            <guid isPermaLink="true">https://www.henkel.es/prensa-y-comunicacion/notas-de-prensa/2026-10-15-de-la-nostalgia-ochentera-a-los-cortes-geometricos-2259254</guid>
+            <pubDate>Thu, 15 Oct 2026 00:00:00 +0200</pubDate>
+        </item>
+
+        <item>
+            <title>LOOK Madrid presenta nuevas tendencias de peluquería profesional</title>
+            <description>El evento LOOK Madrid reúne novedades y tendencias del sector de la peluquería y la barbería profesional.</description>
+            <link>https://www.europapress.es/madrid/ifema-00444/noticia-look-madrid-presenta-tendencias-peluqueria-profesional-main-stage-13-15-noviembre-20261105142058.html</link>
+            <guid isPermaLink="true">https://www.europapress.es/madrid/ifema-00444/noticia-look-madrid-presenta-tendencias-peluqueria-profesional-main-stage-13-15-noviembre-20261105142058.html</guid>
+            <pubDate>Thu, 05 Nov 2026 14:20:58 +0100</pubDate>
+        </item>
+
+        <item>
+            <title>Del bob al wolf cut: los cortes tendencia para la nueva temporada</title>
+            <description>Un repaso a los cortes de pelo que marcan tendencia durante la nueva temporada.</description>
+            <link>https://cadenaser.com/nacional/2026/09/07/del-bob-al-wolfcut-estos-son-los-cortes-tendencia-para-este-nuevo-curso-cadena-ser/</link>
+            <guid isPermaLink="true">https://cadenaser.com/nacional/2026/09/07/del-bob-al-wolfcut-estos-son-los-cortes-tendencia-para-este-nuevo-curso-cadena-ser/</guid>
+            <pubDate>Mon, 07 Sep 2026 00:00:00 +0200</pubDate>
+        </item>
+    </channel>
+</rss>
