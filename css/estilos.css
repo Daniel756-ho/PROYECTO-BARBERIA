@@ -1,8 +1,11 @@
-
 :root {
     --color-principal: #D4AF37;
     --color-fondo: #111111;
     --color-texto: #F5F1E8;
+}
+
+* {
+    box-sizing: border-box;
 }
 
 body {
@@ -29,19 +32,36 @@ h2 {
     text-align: center;
 }
 
-* {
-    box-sizing: border-box;
+main {
+    padding: 20px;
 }
+
+main section {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+
+
 
 header {
     background-color: #1C1C1C;
     padding: 25px;
     text-align: center;
-    border-bottom: 2px solid #D4AF37;
+    border-bottom: 2px solid var(--color-principal);
     background-image: linear-gradient(90deg, #111111, #292010);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
     animation: aparecer 0.8s ease-out;
 }
+
+header p {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--color-texto);
+}
+
+
+
 
 nav {
     background-color: #252525;
@@ -49,6 +69,7 @@ nav {
     text-align: center;
     position: sticky;
     top: 0;
+    z-index: 10;
 }
 
 nav ul {
@@ -57,6 +78,11 @@ nav ul {
     padding: 0;
     display: flex;
     justify-content: center;
+    gap: 25px;
+}
+
+nav li {
+    margin: 0 10px;
 }
 
 nav a {
@@ -74,67 +100,289 @@ nav a:focus {
     outline-offset: 2px;
 }
 
-nav li {
-    margin: 0 15px;
-}
 
-main {
-    padding: 20px;
-}
+
 
 .servicios-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
-    
-}
-
-.tarjeta-servicio h3 {
-    font-size: 20px;
-     line-height: 1.5;
-     text-align: center;
-     font-family: "Cormorant Garamond", serif;
-     
-     
-    
+    margin-top: 30px;
 }
 
 .tarjeta-servicio {
     background-color: rgba(28, 28, 28, 0.9);
-     padding: 20px;
-     border-radius: 6px;
-     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-     transition: transform 0.2s ease;
-     animation: entrada-tarjeta 0.8s ease-out;
+    padding: 20px;
+    border-radius: 6px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transition: transform 0.2s ease, background-color 0.2s ease;
+    animation: entrada-tarjeta 0.8s ease-out;
+}
+
+.tarjeta-servicio h3 {
+    font-size: 20px;
+    line-height: 1.5;
+    text-align: center;
+    font-family: "Cormorant Garamond", serif;
+    color: var(--color-principal);
+    border-bottom: 1px solid #444444;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.tarjeta-servicio p {
+    text-align: center;
 }
 
 .tarjeta-servicio:hover {
     transform: translateY(-4px);
-    
+    background-color: #252525;
 }
 
 
-@keyframes aparecer {
-    from {
-        opacity: 0;
-        transform: translateY(12px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+
+
+.imagen-principal {
+    width: 80%;
+    display: block;
+    margin: 10px auto 25px;
+    border-radius: 8px;
 }
 
-@keyframes entrada-tarjeta {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+video {
+    width: 80%;
+    max-width: 600px;
+    display: block;
+    margin: 25px auto;
+    border-radius: 6px;
 }
+
+iframe {
+    width: 100%;
+    max-width: 560px;
+    display: block;
+    margin: 25px auto;
+}
+
+
+
+
+.seccion-sobre-nosotros {
+    margin-top: 50px;
+}
+
+.sobre-nosotros {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 30px;
+    align-items: center;
+    border-bottom: 1px solid #444444;
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+}
+
+.sobre-nosotros img {
+    width: 100%;
+    display: block;
+    max-width: 250px;
+    margin: 0 auto;
+}
+
+.sobre-nosotros p {
+    margin-bottom: 15px;
+    line-height: 1.7;
+}
+
+.boton-servicios {
+    display: inline-block;
+    background-color: var(--color-principal);
+    color: #111111;
+    padding: 12px 20px;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.boton-servicios:hover {
+    background-color: #B8962E;
+}
+
+
+
+
+.pasos-reserva {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    list-style-position: inside;
+}
+
+.paso-reserva {
+    background-color: rgba(28, 28, 28, 0.9);
+    padding: 20px;
+    border-radius: 6px;
+    border: 1px solid #444444;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.paso-reserva:hover {
+    transform: translateY(-4px);
+    background-color: #252525;
+}
+
+
+
+
+.tabla-tarifas {
+    position: relative;
+    width: 70%;
+    margin: 0 auto;
+    padding: 25px;
+    background-color: #1C1C1C;
+    border-radius: 6px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.tabla-tarifas table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.tabla-tarifas th,
+.tabla-tarifas td {
+    padding: 12px 20px;
+    text-align: left;
+}
+
+.tabla-tarifas th {
+    color: var(--color-principal);
+    border-bottom: 2px solid var(--color-principal);
+}
+
+.tabla-tarifas td {
+    border-bottom: 1px solid #444444;
+}
+
+.tabla-tarifas caption {
+    color: var(--color-principal);
+    font-family: "Cormorant Garamond", serif;
+    font-size: 22px;
+    font-weight: bold;
+    padding-bottom: 15px;
+}
+
+.servicio-destacado {
+    background-color: rgba(212, 175, 55, 0.12);
+    color: var(--color-principal);
+    font-weight: bold;
+}
+
+/* Etiqueta destacada con posicionamiento absoluto */
+
+.servicio-destacado td:first-child {
+    position: relative;
+    padding-right: 140px;
+}
+
+.etiqueta-popular {
+    position: absolute;
+    top: 50%;
+    right: 8px;
+    transform: translateY(-50%);
+    background-color: var(--color-principal);
+    color: #111111;
+    padding: 4px 8px;
+    font-size: 11px;
+    font-weight: bold;
+    border: 1px dashed #111111;
+}
+
+
+
+
+form {
+    width: 80%;
+    max-width: 800px;
+    margin: 25px auto;
+    padding: 25px;
+    background-color: #1C1C1C;
+    border-radius: 6px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea,
+select {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 10px;
+    background-color: #252525;
+    color: var(--color-texto);
+    border: 1px solid #555555;
+    border-radius: 4px;
+    font-family: "DM Sans", sans-serif;
+    font-size: 16px;
+}
+
+form fieldset {
+    border: 1px solid #555555;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+form fieldset:first-of-type label {
+    display: block;
+    margin-bottom: 6px;
+}
+
+form legend {
+    color: var(--color-principal);
+    font-family: "Cormorant Garamond", serif;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+form label {
+    font-weight: 600;
+    color: var(--color-texto);
+}
+
+form button {
+    background-color: var(--color-principal);
+    color: #111111;
+    font-size: 16px;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 4px;
+    margin-top: 15px;
+    margin-left: 15px;
+    font-family: "DM Sans", sans-serif;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+form button:hover {
+    background-color: #B8962E;
+    transform: translateY(-2px);
+}
+
+
+
+
+a:focus,
+button:focus,
+input:focus,
+textarea:focus,
+select:focus {
+    outline: 2px solid var(--color-principal);
+    outline-offset: 2px;
+}
+
+
+
 
 footer {
     background-color: var(--color-fondo);
@@ -153,121 +401,182 @@ footer a:hover {
     color: var(--color-texto);
 }
 
-input[type="text"],
-input[type="email"],
-input[type="tel"], textarea, select {
-    width: 100%;
-    padding: 12px;
-    margin-bottom: 10px;
-    background-color: #252525;
-    color: var(--color-texto);
-    border: 1px solid #555555;
+footer p {
+    margin: 8px 0;
 }
 
-form fieldset:first-of-type label {
-    display: block;
-    margin-bottom: 6px;
-}
-
-form fieldset {
-    border: 1px solid #555555;
-    padding: 20px;
-    margin-bottom: 20px;
-}
-
-form button {
-     background-color: var(--color-principal);
-    color: #111111;
-    padding: 12px 25px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    margin-top: 15px;
-    margin-left: 15px;
-    font-family: "DM Sans", sans-serif;
-    font-weight: bold;
-    transition: background-color 0.3s;
-}
-
-form button:hover {
-    background-color: #B8962E;
-}
-
-form legend {
-    color: var(--color-principal);
-    font-family: "Cormorant Garamond", serif;
-    font-size: 20px;
-    font-weight: bold;
-}
-
-
-.tabla-tarifas {
-    position: relative;
-    width: 70%;
-    margin: 0 auto;
-    padding: 25px;
-    background-color: #1C1C1C;
-    border-radius: 6px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-}
-
-.etiqueta-popular {
-    background-color: var(--color-principal);
-    color: #111111;
-    padding: 4px 8px;
-    font-size: 11px;
-    font-weight: bold;
-    border: 1px dashed #111111;
-    margin-left: 12px;
-}
-
-.tabla-tarifas table {
-    width: 100%;
-    border-collapse: collapse;
-}
-
-.tabla-tarifas th,
-.tabla-tarifas td {
-    padding: 12px 20px;
-    text-align: left;
-}
-
-.tabla-tarifas td {
-    border-bottom: 1px solid #444444;
-}
-
-.servicio-destacado {
-    background-color: rgba(212, 175, 55, 0.12);
-    color: var(--color-principal);
-    font-weight: bold;
+footer p:last-child {
+    margin-top: 30px;
 }
 
 
 
 
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
 
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 
+@keyframes entrada-tarjeta {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
 
-
-
-
-
-
-
-
-
-
-
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 
 
 
 
 @media (max-width: 600px) {
+
+    main {
+        padding: 15px;
+    }
+
+    header {
+        padding: 20px 15px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    nav li {
+        margin: 0;
+    }
+
     .servicios-grid {
         grid-template-columns: 1fr;
     }
+
+    .imagen-principal {
+        width: 100%;
+    }
+
+    video {
+        width: 100%;
+    }
+
+    iframe {
+        width: 100%;
+    }
+
     .tabla-tarifas {
-    width: 100%;
-}
+        width: 100%;
+        padding: 12px;
+    }
+
+    .tabla-tarifas th,
+    .tabla-tarifas td {
+        padding: 10px 8px;
+    }
+
+    .servicio-destacado td:first-child {
+        padding-right: 8px;
+    }
+
+    .etiqueta-popular {
+        position: static;
+        display: inline-block;
+        transform: none;
+        margin-left: 5px;
+        font-size: 9px;
+        padding: 3px 5px;
+    }
+
+    form {
+        width: 100%;
+        padding: 15px;
+    }
+
+    form fieldset {
+        padding: 12px;
+    }
+
+    .sobre-nosotros {
+        grid-template-columns: 1fr;
+    }
+
+    .pasos-reserva {
+        grid-template-columns: 1fr;
+    }
 }
 
+
+
+.confirmacion {
+    max-width: 700px;
+    margin: 60px auto;
+    padding: 40px;
+    text-align: center;
+    background-color: #1C1C1C;
+    border: 1px solid var(--color-principal);
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.confirmacion h2 {
+    font-size: 30px;
+}
+
+.confirmacion h3 {
+    color: var(--color-principal);
+    font-family: "Cormorant Garamond", serif;
+    font-size: 24px;
+}
+
+.icono-confirmacion {
+    color: var(--color-principal);
+    font-size: 55px;
+    font-weight: bold;
+    margin: 15px;
+}
+
+.confirmacion .boton-servicios {
+    margin-top: 20px;
+}
+
+@media (max-width: 600px) {
+    .confirmacion {
+        margin: 30px auto;
+        padding: 25px 15px;
+    }
+}
+
+
+
+
+
+@media (prefers-reduced-motion: reduce) {
+
+    header,
+    .tarjeta-servicio {
+        animation: none;
+    }
+
+    nav a,
+    footer a,
+    form button,
+    .boton-servicios,
+    .tarjeta-servicio,
+    .paso-reserva {
+        transition: none;
+    }
+}
